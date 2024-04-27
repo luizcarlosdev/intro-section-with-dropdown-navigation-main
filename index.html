@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing page</title>
+  <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav id="navigation-options">
+      <img src="./images/logo.svg" alt="">
+      <ul>
+        <li id="first-list">
+          <div class="element-drop">Features <img id="element-drop-image1" src="./images/icon-arrow-down.svg" alt="">
+          </div>
+          <div id="option-active1">
+            <ul>
+              <li><img src="./images/icon-todo.svg" alt="">todo app</li>
+              <li><img src="./images/icon-reminders.svg" alt="">calendar</li>
+              <li><img src="./images/icon-todo.svg" alt="">reminders</li>
+              <li><img src="./images/icon-planning.svg" alt="">planning</li>
+            </ul>
+          </div>
+        </li>
+        <li id="second-list">
+          <div class="element-drop2">Company <img id="element-drop-image2" src="./images/icon-arrow-down.svg" alt="">
+          </div>
+          <div id="option-active2">
+            <ul>
+              <li><a href="#">History</a></li>
+              <li><a href="#">our team</a></li>
+              <li><a href="#">blog</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="">Carrers</a></li>
+        <li><a href="">About</a></li>
+      </ul>
+    </nav>
+    <section id="login-user">
+      <a href="#">Login</a>
+      <button>Register</button>
+    </section>
+    <div id="side-menu-opener">
+      <button id="side-menu-opener-btn"><img src="./images/icon-menu.svg" alt=""></button>
+    </div>
+  </header>
+
+  <div id="sidebar-menu">
+    <nav id="menu">
+      <div id="menu-header">
+        <img src="./images/icon-close-menu.svg" alt="">
+      </div>
+      <div id="menu-body">
+        <ul>
+          <li id="open-menu-todo">features <img id="menu-todo-img" src="./images/icon-arrow-down.svg" alt=""></li>
+          <div id="menu-todo">
+            <ul>
+              <li><img src="./images/icon-todo.svg" alt="">todo list</li>
+              <li><img src="./images/icon-reminders.svg" alt="">calendar</li>
+              <li><img src="./images/icon-todo.svg" alt="">reminders</li>
+              <li><img src="./images/icon-planning.svg" alt="">planning</li>
+            </ul>
+          </div>
+          <li id="open-menu-company">company <img id="menu-company-img" src="./images/icon-arrow-down.svg" alt=""></li>
+          <div id="menu-company">
+            <ul>
+              <li><a href="#">history</a></li>
+              <li><a href="#">our team</a></li>
+              <li><a href="#">blog</a></li>
+            </ul>
+          </div>
+          <li><a href="#">carrers</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+      </div>
+      <div id="menu-footer">
+        <a href="#">login</a>
+        <a href="#"><button>register</button></a>
+      </div>
+        
+    </nav>
+  </div>
+  <main>
+    <section id="first-content">
+      <div id="first-content-header">
+        <h1 id="first-h1">Make<br /> remote work</h1>
+        <h1 id="second-h1">Make remote work</h1>
+        <div id="first-content-main">
+          <p>Get your team in sync, no matter your location.<br /> Streamline process, create team rituals, and<br />
+            watch productivity soar.</p>
+          <button id="learn-more">
+            Learn more
+          </button>
+        </div>
+      </div>
+      <div id="first-content-footer">
+        <a href=""><img src="./images/client-databiz.svg" alt=""></a>
+        <a href=""><img src="./images/client-audiophile.svg" alt=""></a>
+        <a href=""><img src="./images/client-meet.svg" alt=""></a>
+        <a href=""><img src="./images/client-maker.svg" alt=""></a>
+      </div>
+    </section>
+    <section id="second-content">
+      <picture>
+        <source media="(max-width: 596px)" srcset="images/image-hero-mobile.png">
+        <img src="./images/image-hero-desktop.png" alt="">
+      </picture>
+    </section>
+  </main>
+</body>
+
+</html>

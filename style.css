@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Epilogue", sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    border: none;
+}
+
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-grey: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--almost-white);
+}
+
+header {
+    width: 100%;
+    padding: 20px 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav#navigation-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+header nav#navigation-options img {
+    cursor: pointer;
+}
+
+header nav#navigation-options ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    color: var(--almost-black);
+}
+
+header nav#navigation-options ul li {
+    display: block;
+    cursor: pointer;
+    color: var(--medium-grey);
+}
+
+header nav#navigation-options ul li a {
+    color: var(--medium-grey);
+}
+
+header nav#navigation-options li#first-list {
+    position: relative;
+}
+
+header nav#navigation-options div#option-active1 {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 180px;
+    background-color: var(--almost-white);
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px 7px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 20px 15px;
+    margin-top: 15px;
+}
+
+header nav#navigation-options div#option-active1 ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: left;
+}
+
+header nav#navigation-options div#option-active1 li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 14px;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: var(--medium-grey);
+}
+
+header nav#navigation-options div#option-active1 li img {
+    vertical-align: bottom;
+}
+
+header nav#navigation-options li#second-list {
+    position: relative;
+}
+
+header nav#navigation-options li#second-list div#option-active2 {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 180px;
+    background-color: var(--almost-white);
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px 7px rgba(0, 0, 0, 0.1);
+    color: var(--almost-black);
+    display: none;
+    padding: 20px 15px;
+    margin-top: 15px;
+}
+
+header nav#navigation-options li#second-list div#option-active2 ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: left;
+}
+
+header nav#navigation-options li#second-list div#option-active2 ul li {
+    text-transform: capitalize;
+    text-align: justify;
+}
+
+header section#login-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+}
+
+header section#login-user a {
+    color: var(--almost-black);
+}
+
+header section#login-user button {
+    border: 1px solid #0d0d0d;
+    width: 120px;
+    height: 45px;
+    background-color: transparent;
+    padding: 10px 5px;
+    border-radius: 15px;
+}
+
+header div#side-menu-opener {
+    display: none;
+}
+
+header div#side-menu-opener button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+div#sidebar-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.334);
+}
+
+div#sidebar-menu nav#menu {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: var(--almost-white);
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    overflow: hidden;
+}
+
+div#sidebar-menu nav#menu div#menu-header {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 25px 20px;
+
+    & img {
+        cursor: pointer;
+    }
+}
+
+div#sidebar-menu nav#menu div#menu-body {
+    width: 100%;
+    padding: 20px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+div#sidebar-menu nav#menu div#menu-body ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: left;
+}
+
+div#sidebar-menu nav#menu div#menu-body ul li {
+    margin: 10px 0px;
+    font-weight: 500;
+    color: var(--medium-grey);
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+div#sidebar-menu nav#menu div#menu-body ul li a {
+    color: var(--medium-grey);
+}
+
+div#sidebar-menu nav#menu div#menu-body ul li img {
+    vertical-align: middle;
+    margin-left: 12px;
+    width: 14px;
+}
+
+div#sidebar-menu nav#menu div#menu-body ul div#menu-todo {
+    width: 160px;
+    display: none;
+    padding: 5px 20px;
+}
+
+div#sidebar-menu nav#menu div#menu-body ul div#menu-todo ul li {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    row-gap: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: var(--medium-grey);
+    cursor: pointer;
+}
+
+div#sidebar-menu nav#menu div#menu-body ul div#menu-todo ul li img {
+    margin-right: 20px;
+}
+
+div#sidebar-menu nav#menu div#menu-body div#menu-company {
+    width: 100%;
+    display: none;
+}
+
+div#sidebar-menu nav#menu div#menu-body div#menu-company ul {
+    padding: 8px 40px;
+}
+
+div#sidebar-menu nav#menu div#menu-body div#menu-company ul li a {
+    color: var(--medium-grey);
+}
+
+div#sidebar-menu nav#menu div#menu-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+    font-weight: 500;
+    padding: 10px 0px;
+}
+
+div#sidebar-menu nav#menu div#menu-footer a {
+    color: var(--medium-grey);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+div#sidebar-menu nav#menu div#menu-footer button {
+    width: 210px;
+    display: flex;
+    padding: 10px 30px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #696969;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: capitalize;
+    color: var(--almost-black);
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 25px;
+    width: 80%;
+    height: 500px;
+    margin: 45px auto;
+    padding: 40px 0px;
+}
+
+main section#first-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    row-gap: 80px;
+}
+
+main section#first-content div#first-content-header {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 37px;
+}
+
+main section#first-content div#first-content-header h1 {
+    font-size: 3.8rem;
+}
+
+main section#first-content div#first-content-header #second-h1 {
+    display: none;
+}
+
+main section#first-content div#first-content-main {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 27px;
+
+    & p {
+        color: var(--medium-grey);
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    & button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 170px;
+        height: 45px;
+        border-radius: 10px;
+        padding: 12px 11px;
+        font-size: 0.95rem;
+        font-weight: bold;
+        color: var(--almost-white);
+        background-color: var(--almost-black);
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+    }
+
+    & button:hover {
+        color: var(--almost-black);
+        border: 1px solid black;
+        background-color: var(--almost-white);
+    }
+}
+
+main section#first-content div#first-content-footer {
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+main section#second-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: bottom;
+}
+
+main section#second-content img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}
